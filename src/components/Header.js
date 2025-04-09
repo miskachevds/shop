@@ -1,7 +1,8 @@
 import { FaCartShopping } from "react-icons/fa6";
 import React,{ useState} from "react";
+import Order from "./Order";
 
-function Header(){
+function Header(props){
     let[cartOpen, setCartOpen] = useState(false);
 
     return(
@@ -16,7 +17,9 @@ function Header(){
                 <FaCartShopping onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`}/>
                  {cartOpen && (
                     <div className="shop-cart">
-                        
+                        {props.orders.map(el => (
+                            <Order key={el.id} item={el}/>
+                        ))}
                     </div>
                  )}   
             </div>
