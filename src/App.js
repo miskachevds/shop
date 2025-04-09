@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Items from './components/Items';
 import './App.css';
 
 class App extends React.Component {
@@ -83,7 +84,7 @@ class App extends React.Component {
         {
           id: 10,
           title: 'Серия мебели для персонала Берлин',
-          img: 'cl1',
+          img: 'cl1.JPG',
           desc: 'Berlin Шкаф-стеллаж 90x43x208, орех вармия / черный графит в Казани',
           category: 'closet',
           price: '39692'
@@ -96,6 +97,7 @@ class App extends React.Component {
   return (
     <div className='wrapper'>
         <Header />
+        <Items items={this.state.items}/>
         <Footer />
 
     </div>
