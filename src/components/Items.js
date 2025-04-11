@@ -1,12 +1,12 @@
 import Item from "./Item";
 
-function Items({ items, onAdd }) {
+function Items({ items, onAdd, onShowItem }) {
     return (
         <div>
             <main>
                 {
                     items.map(el => (
-                        <Item key={el.id} item={el} onAdd={onAdd} />
+                        <Item onShowItem={onShowItem} key={el.id} item={el} onAdd={onAdd} />
                     ))
                 }
 

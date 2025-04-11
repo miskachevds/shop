@@ -184,6 +184,7 @@ main .item{
   overflow: hidden;
   position: relative;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 
 main .item img{
