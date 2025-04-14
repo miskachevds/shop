@@ -111,7 +111,7 @@ class App extends React.Component {
         <Categories chooseCategory={this.chooseCategory} />
         <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
 
-        {this.state.ShowFullItem && <ShowFullItem onAdd={this.addToOrder} item={this.state.fullItem} /> }
+        {this.state.ShowFullItem && <ShowFullItem onAdd={this.addToOrder} onShowItem={this.onShowItem} item={this.state.fullItem} /> }
         <Footer />
 
       </div>
